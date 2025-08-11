@@ -164,19 +164,19 @@ Refer to `schema.sql` for details.
 
 ## Screenshots
 
-![Screenshot 1](screenshots/screenshot1.jpg)  
+![Screenshot 1](screenshots/screenshot1.jpeg)  
 
-![Screenshot 2](screenshots/screenshot3.jpg)  
+![Screenshot 2](screenshots/screenshot3.jpeg)  
 
-![Screenshot 3](screenshots/screenshot3.jpg)  
+![Screenshot 3](screenshots/screenshot3.jpeg)  
 
-![Screenshot 4](screenshots/screenshot4.jpg)  
+![Screenshot 4](screenshots/screenshot4.jpeg)  
 
-![Screenshot 5](screenshots/screenshot5.jpg)  
+![Screenshot 5](screenshots/screenshot5.jpeg)  
 
-![Screenshot 6](screenshots/screenshot6.jpg)  
+![Screenshot 6](screenshots/screenshot6.jpeg)  
 
-![Screenshot 7](screenshots/screenshot7.jpg)  
+![Screenshot 7](screenshots/screenshot7.jpeg)  
 
 ---
 
