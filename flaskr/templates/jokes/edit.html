@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h6 class="text-muted my-3">Go ahead and change up this joke.</h6>
+<form method="POST" class="form-edit-joke">
+
+    <div class="form-group">
+        <textarea id="body" name="body" class="form-control" rows="4" required>{{ body }}</textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+
+    {% if g.role == 'Moderator' %}
+        <!-- If the user is a Moderator, the back button links to jokes.list -->
+        <a href="{{ url_for('jokes.list') }}" class="btn btn-secondary ml-2">Back</a>
+    {% else %}
+        <!-- Otherwise, the back button links to jokes.my_jokes -->
+        <a href="{{ url_for('jokes.my_jokes') }}" class="btn btn-secondary ml-2">Back</a>
+    {% endif %}
+</form>
+
+{% endblock %}
+
+{% block styles %}
+<style>
+  .form-edit-joke {
+    margin-top: 1rem;
+  }
+
+  .form-group label {
+    font-size: 1rem;
+    color: #343a40;
+  }
+
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+  }
+
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+</style>
+{% endblock %}

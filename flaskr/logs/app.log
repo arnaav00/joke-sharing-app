@@ -1,0 +1,96 @@
+2024-12-10T01:16:48 - __init__ - INFO - Logging setup complete.
+2024-12-10T01:16:48 - db - INFO - App initialized with DB teardown and CLI commands.
+2024-12-10T01:16:48 - __init__ - INFO - Database initialized.
+2024-12-10T01:16:48 - __init__ - INFO - Blueprints registered: auth, jokes, moderation.
+2024-12-10T01:16:48 - __init__ - INFO - App creation complete.
+2024-12-10T01:16:48 - _internal - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-10T01:16:48 - _internal - INFO - [33mPress CTRL+C to quit[0m
+2024-12-10T01:16:48 - _internal - INFO -  * Restarting with watchdog (windowsapi)
+2024-12-10T01:16:48 - __init__ - INFO - Logging setup complete.
+2024-12-10T01:16:48 - db - INFO - App initialized with DB teardown and CLI commands.
+2024-12-10T01:16:48 - __init__ - INFO - Database initialized.
+2024-12-10T01:16:48 - __init__ - INFO - Blueprints registered: auth, jokes, moderation.
+2024-12-10T01:16:48 - __init__ - INFO - App creation complete.
+2024-12-10T01:16:48 - _internal - WARNING -  * Debugger is active!
+2024-12-10T01:16:48 - _internal - INFO -  * Debugger PIN: 155-669-588
+2024-12-10T01:16:50 - __init__ - INFO - Redirecting to login page.
+2024-12-10T01:16:50 - __init__ - INFO - Response returned with status code 302 for GET /
+2024-12-10T01:16:50 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:16:50] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-10T01:16:50 - __init__ - INFO - Response returned with status code 200 for GET /auth/login
+2024-12-10T01:16:50 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:16:50] "GET /auth/login HTTP/1.1" 200 -
+2024-12-10T01:16:51 - __init__ - INFO - Response returned with status code 404 for GET /favicon.ico
+2024-12-10T01:16:51 - __init__ - WARNING - Non-successful HTTP response: 404
+2024-12-10T01:16:51 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:16:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-10T01:16:53 - auth - INFO - User arn logged in successfully with role Moderator.
+2024-12-10T01:16:53 - __init__ - INFO - Response returned with status code 302 for POST /auth/login
+2024-12-10T01:16:53 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:16:53] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2024-12-10T01:16:53 - auth - INFO - User ID 1 loaded into g context with role Moderator.
+2024-12-10T01:16:53 - __init__ - INFO - User session initialized: user_id=1, role=Moderator
+2024-12-10T01:16:53 - jokes - WARNING - Moderator arn tried to leave a joke
+2024-12-10T01:16:53 - __init__ - INFO - Response returned with status code 302 for GET /jokes/leave
+2024-12-10T01:16:53 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:16:53] "[32mGET /jokes/leave HTTP/1.1[0m" 302 -
+2024-12-10T01:16:53 - auth - INFO - User ID 1 loaded into g context with role Moderator.
+2024-12-10T01:16:53 - __init__ - INFO - User session initialized: user_id=1, role=Moderator
+2024-12-10T01:16:53 - __init__ - INFO - Response returned with status code 200 for GET /jokes/list
+2024-12-10T01:16:53 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:16:53] "GET /jokes/list HTTP/1.1" 200 -
+2024-12-10T01:16:55 - auth - INFO - User ID 1 loaded into g context with role Moderator.
+2024-12-10T01:16:55 - __init__ - INFO - User session initialized: user_id=1, role=Moderator
+2024-12-10T01:16:55 - moderation - INFO - Moderator arn viewed the user list
+2024-12-10T01:16:55 - __init__ - INFO - Response returned with status code 200 for GET /moderation/users
+2024-12-10T01:16:55 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:16:55] "GET /moderation/users HTTP/1.1" 200 -
+2024-12-10T01:16:57 - auth - INFO - User ID 1 loaded into g context with role Moderator.
+2024-12-10T01:16:57 - __init__ - INFO - User session initialized: user_id=1, role=Moderator
+2024-12-10T01:16:57 - __init__ - INFO - Response returned with status code 200 for GET /moderation/edit_user/1
+2024-12-10T01:16:57 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:16:57] "GET /moderation/edit_user/1 HTTP/1.1" 200 -
+2024-12-10T01:17:00 - auth - INFO - User ID 1 loaded into g context with role Moderator.
+2024-12-10T01:17:00 - __init__ - INFO - User session initialized: user_id=1, role=Moderator
+2024-12-10T01:17:00 - moderation - INFO - Moderator arn viewed the user list
+2024-12-10T01:17:00 - __init__ - INFO - Response returned with status code 200 for GET /moderation/users
+2024-12-10T01:17:00 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:17:00] "GET /moderation/users HTTP/1.1" 200 -
+2024-12-10T01:17:02 - auth - INFO - User ID 1 loaded into g context with role Moderator.
+2024-12-10T01:17:02 - __init__ - INFO - User session initialized: user_id=1, role=Moderator
+2024-12-10T01:17:02 - __init__ - INFO - Response returned with status code 200 for GET /moderation/edit_user/1
+2024-12-10T01:17:02 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:17:02] "GET /moderation/edit_user/1 HTTP/1.1" 200 -
+2024-12-10T01:17:04 - auth - INFO - User ID 1 loaded into g context with role Moderator.
+2024-12-10T01:17:04 - __init__ - INFO - User session initialized: user_id=1, role=Moderator
+2024-12-10T01:17:04 - moderation - INFO - Moderator arn viewed the user list
+2024-12-10T01:17:04 - __init__ - INFO - Response returned with status code 200 for GET /moderation/users
+2024-12-10T01:17:04 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:17:04] "GET /moderation/users HTTP/1.1" 200 -
+2024-12-10T01:17:05 - auth - INFO - User ID 1 loaded into g context with role Moderator.
+2024-12-10T01:17:05 - __init__ - INFO - User session initialized: user_id=1, role=Moderator
+2024-12-10T01:17:05 - __init__ - INFO - Response returned with status code 200 for GET /jokes/list
+2024-12-10T01:17:05 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:17:05] "GET /jokes/list HTTP/1.1" 200 -
+2024-12-10T01:17:08 - auth - INFO - User ID 1 loaded into g context with role Moderator.
+2024-12-10T01:17:08 - __init__ - INFO - User session initialized: user_id=1, role=Moderator
+2024-12-10T01:17:08 - __init__ - INFO - Response returned with status code 200 for GET /jokes/edit/1
+2024-12-10T01:17:08 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:17:08] "GET /jokes/edit/1 HTTP/1.1" 200 -
+2024-12-10T01:17:10 - auth - INFO - User ID 1 loaded into g context with role Moderator.
+2024-12-10T01:17:10 - __init__ - INFO - User session initialized: user_id=1, role=Moderator
+2024-12-10T01:17:10 - jokes - INFO - User arn updated joke 1
+2024-12-10T01:17:10 - __init__ - INFO - Response returned with status code 302 for POST /jokes/edit/1
+2024-12-10T01:17:10 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:17:10] "[32mPOST /jokes/edit/1 HTTP/1.1[0m" 302 -
+2024-12-10T01:17:10 - auth - INFO - User ID 1 loaded into g context with role Moderator.
+2024-12-10T01:17:10 - __init__ - INFO - User session initialized: user_id=1, role=Moderator
+2024-12-10T01:17:10 - __init__ - INFO - Response returned with status code 200 for GET /jokes/list
+2024-12-10T01:17:10 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:17:10] "GET /jokes/list HTTP/1.1" 200 -
+2024-12-10T01:17:12 - auth - INFO - User ID 1 loaded into g context with role Moderator.
+2024-12-10T01:17:12 - __init__ - INFO - User session initialized: user_id=1, role=Moderator
+2024-12-10T01:17:12 - jokes - WARNING - Moderator arn tried to leave a joke
+2024-12-10T01:17:12 - __init__ - INFO - Response returned with status code 302 for GET /jokes/leave
+2024-12-10T01:17:12 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:17:12] "[32mGET /jokes/leave HTTP/1.1[0m" 302 -
+2024-12-10T01:17:12 - auth - INFO - User ID 1 loaded into g context with role Moderator.
+2024-12-10T01:17:12 - __init__ - INFO - User session initialized: user_id=1, role=Moderator
+2024-12-10T01:17:12 - __init__ - INFO - Response returned with status code 200 for GET /jokes/list
+2024-12-10T01:17:12 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:17:12] "GET /jokes/list HTTP/1.1" 200 -
+2024-12-10T01:17:14 - auth - INFO - User ID 1 loaded into g context with role Moderator.
+2024-12-10T01:17:14 - __init__ - INFO - User session initialized: user_id=1, role=Moderator
+2024-12-10T01:17:14 - __init__ - INFO - Response returned with status code 200 for GET /jokes/list
+2024-12-10T01:17:14 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:17:14] "GET /jokes/list HTTP/1.1" 200 -
+2024-12-10T01:17:15 - auth - INFO - User ID 1 loaded into g context with role Moderator.
+2024-12-10T01:17:15 - __init__ - INFO - User session initialized: user_id=1, role=Moderator
+2024-12-10T01:17:15 - auth - INFO - User ID 1 (arn) logged out.
+2024-12-10T01:17:15 - __init__ - INFO - Response returned with status code 302 for GET /auth/logout
+2024-12-10T01:17:15 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:17:15] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2024-12-10T01:17:15 - __init__ - INFO - Response returned with status code 200 for GET /auth/login
+2024-12-10T01:17:15 - _internal - INFO - 127.0.0.1 - - [10/Dec/2024 01:17:15] "GET /auth/login HTTP/1.1" 200 -

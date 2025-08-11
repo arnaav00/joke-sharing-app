@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h6>How do we know you really are who you say you are?</h6>
+<form method="POST">
+    <div class="form-group">
+        <label for="username">Email or Nickname</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+<a href="{{ url_for('auth.register') }}" class="btn btn-outline-secondary mt-3">Register</a>
+
+{% endblock %}

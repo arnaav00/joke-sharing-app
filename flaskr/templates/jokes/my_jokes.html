@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h6 class="text-muted my-3">Here's all your jokes to view, edit, delete, or laugh at for yourself.</h6>
+
+  <ul class="list-group mb-3">
+    {% for joke in jokes %}
+      <li class="list-group-item d-flex justify-content-between align-items-center joke-item">
+        <div>
+          <a href="{{ url_for('jokes.view', joke_id=joke['id']) }}" class="text-dark font-weight-bold joke-title">{{ joke['title'] }}</a>
+          <span class="text-secondary joke-rating">- Average Rating: {{ joke['rating'] or 'Not rated' }}</span>
+        </div>
+        <div class="btn-group" role="group">
+          <!-- Edit button -->
+          <a href="{{ url_for('jokes.edit_joke', joke_id=joke.id) }}" class="btn btn-outline-primary btn-sm">Edit</a>
+
+          <!-- Delete button form -->
+          <form action="{{ url_for('jokes.delete', joke_id=joke.id) }}" method="post" style="display:inline;">
+            <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+          </form>
+        </div>
+      </li>
+    {% else %}
+      <p class="text-warning no-jokes">You haven't submitted any jokes yet.</p>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+{% block styles %}
+<style>
+  .joke-item {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .joke-item:hover {
+    background-color: #f1f1f1;
+  }
+
+  .joke-title {
+    font-size: 1.1rem;
+  }
+
+  .joke-rating {
+    font-size: 0.9rem;
+  }
+
+  .no-jokes {
+    font-style: italic;
+  }
+
+  .btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+  }
+
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .btn-outline-danger {
+    border-color: #dc3545;
+    color: #dc3545;
+  }
+
+  .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+  }
+</style>
+{% endblock %}

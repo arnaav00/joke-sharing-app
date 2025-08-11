@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h6 class="text-muted my-3">Don't be greedy! Only take one for every joke you leave.</h6>
+  <ul class="list-group mb-3">
+    {% for joke in jokes %}
+      <li class="list-group-item d-flex justify-content-between align-items-center joke-item">
+        <div>
+          <a href="{{ url_for('jokes.view', joke_id=joke['id']) }}" class="text-dark font-weight-bold joke-title">{{ joke['title'] }}</a>
+          <span class="text-secondary joke-author">by {{ joke['nickname'] }}</span>
+          <span class="text-secondary joke-rating">- Average Rating: {{ joke['rating'] or 'Not rated' }}</span>
+        </div>
+
+        {% if g.role == 'Moderator' %}
+          <!-- Container for buttons with small gap -->
+          <div class="btn-group" role="group">
+            <!-- Edit button for Moderator (Green) -->
+            <a href="{{ url_for('jokes.edit_joke', joke_id=joke['id']) }}" class="btn btn-success btn-sm mr-2">Edit</a>
+
+            <!-- Delete button for Moderator (Red) -->
+            <form action="{{ url_for('jokes.delete', joke_id=joke['id']) }}" method="POST" style="display: inline;">
+              <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </form>
+          </div>
+        {% endif %}
+      </li>
+    {% else %}
+      <p class="text-warning no-jokes">No jokes are available for you to view.</p>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+{% block styles %}
+<style>
+  .joke-item {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .joke-item:hover {
+    background-color: #f1f1f1;
+  }
+
+  .joke-title {
+    font-size: 1.1rem;
+  }
+
+  .joke-author {
+    font-size: 0.9rem;
+    margin-left: 10px;
+  }
+
+  .joke-rating {
+    font-size: 0.9rem;
+    margin-left: 5px;
+  }
+
+  .no-jokes {
+    font-style: italic;
+  }
+
+  /* Fix button colors to always appear */
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+
+  .btn-success:hover, .btn-success:focus, .btn-success:active {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+
+  .btn-danger:hover, .btn-danger:focus, .btn-danger:active {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+
+  /* Ensuring small gap between buttons */
+  .mr-2 {
+    margin-right: 0.5rem; /* Small gap between buttons */
+  }
+</style>
+{% endblock %}

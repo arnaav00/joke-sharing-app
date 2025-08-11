@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Display users' list -->
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nickname</th>
+                <th>Email</th>
+                <th>Joke Balance</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td><strong>{{ user.nickname }}</strong></td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.joke_balance }}</td>
+                    <td>{{ user.role }}</td>
+                    <td>
+                        <!-- Actions (Edit) -->
+                        <a href="{{ url_for('moderation.edit_user', user_id=user.id) }}" class="btn btn-primary btn-sm">Edit</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Button to toggle debug mode for moderators -->
+    {% if g.role == 'Moderator' %}
+        <form method="POST" action="{{ url_for('moderation.toggle_debug') }}">
+            <button type="submit" class="btn btn-warning btn-sm">
+                {% if debug %}
+                    Toggle Debug Mode
+                {% else %}
+                    Toggle Debug Mode
+                {% endif %}
+            </button>
+        </form>
+    {% endif %}
+{% endblock %}

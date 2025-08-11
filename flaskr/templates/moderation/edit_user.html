@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3 class="text-muted my-3">Edit User Information</h3>
+<form method="POST">
+    <div class="form-group">
+        <label for="joke_balance">Joke Balance</label>
+        <input type="number" id="joke_balance" name="joke_balance" class="form-control" value="{{ user.joke_balance }}" min="1" required>
+    </div>
+
+    <div class="form-group">
+        <label for="role">Role</label>
+        <select id="role" name="role" class="form-control">
+            <option value="User" {% if user.role == 'User' %}selected{% endif %}>User</option>
+            <option value="Moderator" {% if user.role == 'Moderator' %}selected{% endif %}>Moderator</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <a href="{{ url_for('moderation.users') }}" class="btn btn-secondary ml-2">Back</a>
+</form>
+{% endblock %}
+
+{% block styles %}
+<style>
+  .form-group label {
+    font-size: 1rem;
+    color: #343a40;
+  }
+
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+  }
+
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+</style>
+{% endblock %}

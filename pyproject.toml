@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flaskr_project"
+version = "0.1.0"
+description = "A joke-sharing Flask application."
+dependencies = [
+    "Flask",
+    "click",
+    "werkzeug",
+    "Flask-Login"
+]
+
+[tool.setuptools]
+packages = ["flaskr"]

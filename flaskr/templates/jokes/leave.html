@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <style>
+    .joke-container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border: 1px solid #f0f0f0;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .joke-container h2 {
+      font-size: 28px;
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .joke-container h6 {
+      font-size: 18px;
+      color: #777;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    
+    .joke-container label {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #444;
+      display: block;
+    }
+
+    .joke-container input[type="text"],
+    .joke-container textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+      background-color: #f9f9f9;
+      color: #333;
+      box-sizing: border-box;
+    }
+
+    .joke-container input[type="text"]:focus,
+    .joke-container textarea:focus {
+      border-color: #5cb85c;
+      outline: none;
+    }
+
+    .joke-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #5cb85c;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .joke-container button:hover {
+      background-color: #4cae4c;
+    }
+
+    .joke-container button:active {
+      background-color: #449d44;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+      .joke-container {
+        padding: 20px;
+      }
+
+      .joke-container h2 {
+        font-size: 24px;
+      }
+
+      .joke-container h6 {
+        font-size: 16px;
+      }
+      
+      .joke-container button {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+  <div class="joke-container">
+    <h2>Leave A Joke</h2>
+    <h6>Remember to make it funny!</h6>
+    <form method="post">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" placeholder="Enter a catchy title" required>
+
+      <label for="body">Your Joke:</label>
+      <textarea id="body" name="body" rows="6" placeholder="Tell your funniest joke here" required></textarea>
+
+      <button type="submit">Submit Joke</button>
+    </form>
+  </div>
+{% endblock %}
