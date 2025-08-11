@@ -164,14 +164,19 @@ Refer to `schema.sql` for details.
 
 ## Screenshots
 
-*Add screenshots here from the `/screenshots` folder to illustrate:*
+![Screenshot 1](screenshots/screenshot1.jpg)  
 
-- User registration and login pages
-- Joke submission form
-- Joke listing and viewing pages
-- Joke rating interface
-- Moderator user management dashboard
-- Debug logging toggle interface
+![Screenshot 2](screenshots/screenshot3.jpg)  
+
+![Screenshot 3](screenshots/screenshot3.jpg)  
+
+![Screenshot 4](screenshots/screenshot4.jpg)  
+
+![Screenshot 5](screenshots/screenshot5.jpg)  
+
+![Screenshot 6](screenshots/screenshot6.jpg)  
+
+![Screenshot 7](screenshots/screenshot7.jpg)  
 
 ---
 
