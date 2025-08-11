@@ -1,4 +1,4 @@
-# Master of Jokes
+# Leave A Joke, Take A Joke
 
 ## Overview
 
